@@ -13,7 +13,7 @@ There is more than one way to do this. These are some examples:
    
       At a very high level this is an App Role. When using this approach, the `access token` will contain the `Roles` claim. And based on this claim you can program your backend to authorize or not access to certain endpoints. For example, when your backend receives a request it can check if the bearer token contains the role "admin", if it does it can let the request pass and access the endpoint to create a new account, for instance.
 
-      Another interesting fact to note about this method is that it allows you to configure your backend app in the Identify Provider to "require user/app assignment". This means that when that option is `on` a client app will not even be able to request an `access token` from the Identity Provider for this backend app unless it has been explicitly added to an app role defined by the backend.
+      Another interesting fact to note about this method is that it allows you to configure your backend app in the Identity Provider to "require user/app assignment". This means that when that option is `on` a client app will not even be able to request an `access token` from the Identity Provider for this backend app unless it has been explicitly added to an app role defined by the backend.
 
 ## We have some applications that need to interact with each other without a user directly involved. How can an app get authorized to access another one?
 
@@ -35,7 +35,7 @@ In summary, Authorization Code with PKCE is always preferred. However, if the Au
 
 ## Why aren't NTML and Kerberos suitable for the cloud?
 
-Protocols like Kerberos and NTLM don't work well in the cloud because they need to use many different ports and most firewalls typically only allow port 80 and 443. Kerberos' Ticket Granting system that issues tickets that only allow access to machines that are within the same Kerberos realm.
+Protocols like Kerberos and NTLM don't work well in the cloud because they need to use many different ports and most firewalls typically only allow port 80 and 443. Kerberos' Ticket Granting system issues tickets that only allow access to machines that are within the same Kerberos realm.
 
 **Integrated Windows Authentication (IWA)**
 IWA used to be a common choice for ASP.NET applications running on Microsoft IIS. IWA has been popular because it allows a seamless single sign-on experience for users who have logged in to their Windows workstation using domain credentials. 
