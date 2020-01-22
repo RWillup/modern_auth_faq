@@ -2,6 +2,10 @@
 
 These are some of the most frequently asked questions about OpenID Connect and OAuth.
 
+### Modern Auth... what??
+
+![OWhat?](https://media.giphy.com/media/CDJo4EgHwbaPS/giphy.gif)
+
 ## How do we control and segregate access in our backend API?
 
 There is more than one way to do this. These are some examples:   
