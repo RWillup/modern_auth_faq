@@ -46,6 +46,8 @@ IWA used to be a common choice for ASP.NET applications running on Microsoft IIS
 
 IWA, however, relies on NTLM or Kerberos and so it requires the user's workstation and the server the application is running on to be joined to the same Active Directory domain or trusting domains. So one of the consequences of relying on IWA is that you cannot have other IdPs, which means you cannot authenticate users or applications from different domains.
 
+![Oook](https://media.giphy.com/media/j2nATOAdRgYZq/giphy.gif)
+
 ## What is an Identity Provider (IdP)?
 
 An *Identity Provider* is a system that provides authentication services for your workloads and ultimately decides whether to authenticate a user.
@@ -64,7 +66,21 @@ The following test was extracted from Google Cloud documentation:
 
 *For applications that you plan to develop, OAuth 2.0 or OIDC should be your preferred choice. These protocols are widely adopted, and you can take advantage of many well-tested libraries and tools.*
 
+## What is the difference between the Authorization Code and the Access Token?
+
+This is also a very common question. 
+
+The `Authorization Code`, which is used in the `Authorization Code Grant Type`, is a representation of the End-User's concent and it is invalidated as soon as it's redeemed. So it's only used once. This code is sent from the Authorization Server to the Client, when the End-User concents, and then it is sent by the Client to the Authorization Server which redeems it and exchanges it for an `Access Token`.
+
+The `Access Token`, on the other hand, is sent by the Client to the Resource Server and if valid is exchanged by the resource. The Access Token can be used as much as needed within its validity.
+
 ## Sources
 
 [Authenticating Corporate Users in a Hybrid Environment](https://cloud.google.com/solutions/authenticating-corporate-users-in-a-hybrid-environment#identity_providers)
+
+[Microsoft Identity Platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-overview)
+
+[OAuth 2 Specs](https://oauth.net/2/)
+
+[OIDC Specs](https://openid.net/specs/openid-connect-core-1_0.html)
 
