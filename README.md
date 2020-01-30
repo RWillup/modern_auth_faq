@@ -46,7 +46,7 @@ IWA used to be a common choice for ASP.NET applications running on Microsoft IIS
 
 IWA, however, relies on NTLM or Kerberos and so it requires the user's workstation and the server the application is running on to be joined to the same Active Directory domain or trusting domains. So one of the consequences of relying on IWA is that you cannot have other IdPs, which means you cannot authenticate users or applications from different domains.
 
-![Aham](https://media.giphy.com/media/j2nATOAdRgYZq/giphy.gif)
+![Aham](https://media0.giphy.com/media/j2nATOAdRgYZq/source.gif)
 
 ## What is an Identity Provider (IdP)?
 
